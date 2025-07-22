@@ -38,31 +38,36 @@ const Navbar = () => {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="center" className="w-[200px]">
-                  <DropdownMenuItem asChild>
-                    <Link to="/solutions/erp" className="cursor-pointer">
-                      ERP System
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/solutions/bom" className="cursor-pointer">
-                      BOM & Costing
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/solutions/inventory" className="cursor-pointer">
-                      Inventory Management
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/solutions/analytics" className="cursor-pointer">
-                      Analytics
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/solutions/integrations" className="cursor-pointer">
-                      Integrations
-                    </Link>
-                  </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/solutions/erp" className="cursor-pointer">
+                    ERP System
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/solutions/bom" className="cursor-pointer">
+                    BOM & Costing
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/solutions/inventory" className="cursor-pointer">
+                    Inventory Management
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/solutions/invoicing" className="cursor-pointer">
+                    Invoicing
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/solutions/analytics" className="cursor-pointer">
+                    Analytics
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/solutions/integrations" className="cursor-pointer">
+                    Integrations
+                  </Link>
+                </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
@@ -75,21 +80,21 @@ const Navbar = () => {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="center" className="w-[200px]">
-                  <DropdownMenuItem asChild>
-                    <Link to="/company/about" className="cursor-pointer">
-                      About Us
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/company/team" className="cursor-pointer">
-                      Our Team
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/company/careers" className="cursor-pointer">
-                      Careers
-                    </Link>
-                  </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/company/about" className="cursor-pointer">
+                    About Us
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/company/team" className="cursor-pointer">
+                    Our Team
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/company/careers" className="cursor-pointer">
+                    Careers
+                  </Link>
+                </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 

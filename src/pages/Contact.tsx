@@ -23,11 +23,26 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject || 'Inquiry from UnifyEdge Website');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Company: ${formData.company}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Inquiry Type: ${formData.inquiryType}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    const mailtoLink = `mailto:pratham.arora55@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      title: "Email Client Opened!",
+      description: "Your email client should open with the pre-filled message.",
     });
+    
     setFormData({
       name: '',
       email: '',

@@ -7,7 +7,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-primary">UnifyEdge</h2>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/4e048db8-c9bb-40ce-b177-127638a2a814.png" 
+                alt="UnifyEdge" 
+                className="h-8 w-auto"
+              />
+            </div>
             <p className="text-muted-foreground">
               Transforming textile manufacturing with cutting-edge ERP solutions
             </p>
@@ -47,6 +53,11 @@ const Footer = () => {
               <li>
                 <Link to="/solutions/inventory" className="text-muted-foreground hover:text-primary">
                   Inventory Management
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/invoicing" className="text-muted-foreground hover:text-primary">
+                  Invoicing
                 </Link>
               </li>
               <li>
