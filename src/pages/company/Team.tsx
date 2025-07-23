@@ -9,24 +9,24 @@ const Team = () => {
       name: "Pratham Arora",
       position: "Chief Executive Officer",
       description: "Visionary leader with 10+ years in textile technology and business strategy.",
-      email: "pratham.arora55@unifyedge.shop",
-      linkedin: "https://www.linkedin.com/company/unifyedge",
+      email: "pratham.arora@unifyedge.shop",
+      linkedin: "https://www.linkedin.com/in/prathamarora55/",
       image: "/lovable-uploads/b1749b33-a45b-4b85-823c-14efa2d2a458.png"
     },
     {
       name: "Shubham Chaudhary",
       position: "Chief Technology Officer",
       description: "Expert in ERP systems and software architecture with deep textile industry knowledge.",
-      email: "shubham@unifyedge.shop",
-      linkedin: "https://www.linkedin.com/company/unifyedge",
+      email: "shubham.chaudhary@unifyedge.shop",
+      linkedin: "https://www.linkedin.com/in/shubhkk07/",
       image: "/lovable-uploads/a241852b-e175-4feb-bc0a-8a78fb3d020c.png"
     },
     {
       name: "Aditeya Gupta",
       position: "Chief Financial Officer",
       description: "Financial strategist ensuring sustainable growth and operational excellence.",
-      email: "aditeya@unifyedge.shop",
-      linkedin: "https://www.linkedin.com/company/unifyedge",
+      email: "aditeya.gupta@unifyedge.shop",
+      linkedin: "https://www.linkedin.com/in/adityagupta012/",
       image: "/lovable-uploads/5f568751-5b53-469e-9d54-d1840df9a42d.png"
     }
   ];
