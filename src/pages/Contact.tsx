@@ -185,9 +185,9 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Office Address</h3>
                       <p className="text-muted-foreground">
-                        123 Business District<br />
-                        New York, NY 10001<br />
-                        United States
+                        Phase 9 Mohali<br />
+                        160062, Punjab<br />
+                        India
                       </p>
                     </div>
                   </div>
@@ -197,8 +197,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
                       <p className="text-muted-foreground">
-                        Sales: +1 (555) 123-4567<br />
-                        Support: +1 (555) 765-4321
+                        Sales: +91 7009849965<br />
+                        Support: +91 8437138357
                       </p>
                     </div>
                   </div>
@@ -208,8 +208,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <p className="text-muted-foreground">
-                        Sales: sales@unifyedge.com<br />
-                        Support: support@unifyedge.com
+                        Sales: sales@unifyedge.shop<br />
+                        Support: support@unifyedge.shop
                       </p>
                     </div>
                   </div>
@@ -219,7 +219,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Business Hours</h3>
                       <p className="text-muted-foreground">
-                        Monday - Friday: 9:00 AM - 6:00 PM EST<br />
+                        Monday - Friday: 9:00 AM - 6:00 PM IST<br />
                         Saturday - Sunday: Closed
                       </p>
                     </div>

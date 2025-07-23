@@ -198,7 +198,7 @@ const Integrations = () => {
                     disabled={integration.status === "Coming Soon"}
                     onClick={() => {
                       if (integration.status === "Active") {
-                        window.open('#', '_blank');
+                        window.open('/signup', '_blank');
                       } else if (integration.status === "Beta") {
                         window.open('/contact', '_blank');
                       }
