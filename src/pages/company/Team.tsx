@@ -11,7 +11,7 @@ const Team = () => {
       description: "Visionary leader with 10+ years in textile technology and business strategy.",
       email: "pratham.arora55@unifyedge.shop",
       linkedin: "https://www.linkedin.com/company/unifyedge",
-      image: "/lovable-uploads/pratham-arora.png"
+      image: "/lovable-uploads/b1749b33-a45b-4b85-823c-14efa2d2a458.png"
     },
     {
       name: "Shubham Chaudhary",
@@ -19,7 +19,7 @@ const Team = () => {
       description: "Expert in ERP systems and software architecture with deep textile industry knowledge.",
       email: "shubham@unifyedge.shop",
       linkedin: "https://www.linkedin.com/company/unifyedge",
-      image: "/lovable-uploads/shubham-chaudhary.png"
+      image: "/lovable-uploads/a241852b-e175-4feb-bc0a-8a78fb3d020c.png"
     },
     {
       name: "Aditeya Gupta",
@@ -27,7 +27,7 @@ const Team = () => {
       description: "Financial strategist ensuring sustainable growth and operational excellence.",
       email: "aditeya@unifyedge.shop",
       linkedin: "https://www.linkedin.com/company/unifyedge",
-      image: "/lovable-uploads/aditeya-gupta.png"
+      image: "/lovable-uploads/5f568751-5b53-469e-9d54-d1840df9a42d.png"
     }
   ];
 
@@ -55,7 +55,7 @@ const Team = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                      className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg"
                     />
                     <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
                     <Badge variant="secondary" className="mb-3">
