@@ -55,7 +55,9 @@ const Team = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg"
+                      className={`w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg ${
+                        member.name === "Pratham Arora" ? "object-top" : ""
+                      }`}
                     />
                     <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
                     <Badge variant="secondary" className="mb-3">
