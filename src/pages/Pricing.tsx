@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const pricingPlans = [
   {
     name: "Starter",
-    price: "199",
+    price: "12,999",
     period: "month",
     description: "Perfect for small textile businesses",
     popular: false,
@@ -29,7 +29,7 @@ const pricingPlans = [
   },
   {
     name: "Professional",
-    price: "499",
+    price: "29,999",
     period: "month",
     description: "Ideal for growing textile manufacturers",
     popular: true,
@@ -110,12 +110,12 @@ const Pricing = () => {
                 
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">
-                      {plan.price === "Custom" ? "Custom" : `$${plan.price}`}
-                    </span>
-                    {plan.period && <span className="text-muted-foreground">/{plan.period}</span>}
-                  </div>
+                   <div className="mt-4">
+                     <span className="text-4xl font-bold">
+                       {plan.price === "Custom" ? "Custom" : `₹${plan.price}`}
+                     </span>
+                     {plan.period && <span className="text-muted-foreground">/{plan.period}</span>}
+                   </div>
                   <p className="text-muted-foreground mt-2">{plan.description}</p>
                 </CardHeader>
 
@@ -135,7 +135,7 @@ const Pricing = () => {
                     ))}
                   </ul>
 
-                  <Link to="/contact" className="block">
+                  <Link to={plan.price === "Custom" ? "/contact" : "/signup"} className="block">
                     <Button 
                       className="w-full" 
                       variant={plan.popular ? "default" : "outline"}

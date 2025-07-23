@@ -114,7 +114,7 @@ const Integrations = () => {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Connect UnifyEdge with your existing tools and systems. Our extensive integration library 
-              ensures seamless data flow across your entire business ecosystem.
+              and AI agents ensure seamless data flow across your entire business ecosystem with intelligent automation.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Badge variant="secondary" className="px-4 py-2">
@@ -128,6 +128,9 @@ const Integrations = () => {
               <Badge variant="secondary" className="px-4 py-2">
                 <Database className="h-4 w-4 mr-2" />
                 Data Integrity
+              </Badge>
+              <Badge variant="secondary" className="px-4 py-2">
+                🤖 AI Agents
               </Badge>
             </div>
           </div>
@@ -202,6 +205,35 @@ const Integrations = () => {
               </Card>
             ))}
           </div>
+
+          {/* AI Integration Feature */}
+          <Card className="mb-16 border-0 bg-gradient-to-br from-primary/5 to-accent/5">
+            <CardContent className="text-center py-12">
+              <div className="text-6xl mb-6">🤖</div>
+              <h3 className="text-2xl font-bold mb-4">
+                AI-Powered Integration Intelligence
+              </h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Our deployed AI agents continuously monitor your integrations, optimize data flow, 
+                and automatically resolve common integration issues. Experience 99.9% uptime with 
+                intelligent automation that learns from your business patterns.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="p-4 border border-border rounded-lg">
+                  <h4 className="font-semibold mb-2">Smart Monitoring</h4>
+                  <p className="text-sm text-muted-foreground">AI agents monitor all integrations 24/7</p>
+                </div>
+                <div className="p-4 border border-border rounded-lg">
+                  <h4 className="font-semibold mb-2">Auto-Resolution</h4>
+                  <p className="text-sm text-muted-foreground">Automatic fixing of common integration issues</p>
+                </div>
+                <div className="p-4 border border-border rounded-lg">
+                  <h4 className="font-semibold mb-2">Predictive Insights</h4>
+                  <p className="text-sm text-muted-foreground">Predict and prevent integration failures</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Custom Integration CTA */}
           <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">

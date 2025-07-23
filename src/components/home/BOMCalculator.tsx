@@ -33,7 +33,7 @@ const BOMCalculator = () => {
     style: '',
     size: 'M',
     quantity: 100,
-    cppFactor: 0.85 // Cutting Planning Percentage
+    cppFactor: 1.15 // Consumption Per Piece (15% extra)
   });
   const { toast } = useToast();
 
@@ -106,8 +106,8 @@ const BOMCalculator = () => {
             BOM & Costing Calculator
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Calculate precise Bill of Materials and costing for your textile products. 
-            Input materials, quantities, and get instant cost per item calculations.
+            Calculate precise Bill of Materials and costing for your textile products with CPP (Consumption Per Piece). 
+            Input materials, quantities, and get instant cost per item calculations in Indian Rupees.
           </p>
         </div>
 
@@ -161,18 +161,19 @@ const BOMCalculator = () => {
                       />
                     </div>
                   </div>
-                  <div>
-                    <Label htmlFor="cpp">CPP Factor (Cutting Planning %)</Label>
-                    <Input
-                      id="cpp"
-                      type="number"
-                      step="0.01"
-                      min="0"
-                      max="1"
-                      value={garmentDetails.cppFactor}
-                      onChange={(e) => setGarmentDetails({...garmentDetails, cppFactor: parseFloat(e.target.value) || 0})}
-                    />
-                  </div>
+                   <div>
+                     <Label htmlFor="cpp">CPP (Consumption Per Piece)</Label>
+                     <Input
+                       id="cpp"
+                       type="number"
+                       step="0.01"
+                       min="0"
+                       max="2"
+                       value={garmentDetails.cppFactor}
+                       onChange={(e) => setGarmentDetails({...garmentDetails, cppFactor: parseFloat(e.target.value) || 0})}
+                       placeholder="e.g., 1.15 for 15% extra consumption"
+                     />
+                   </div>
                 </CardContent>
               </Card>
 
@@ -234,7 +235,7 @@ const BOMCalculator = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="unitCost">Unit Cost ($)</Label>
+                      <Label htmlFor="unitCost">Unit Cost (₹)</Label>
                       <Input
                         id="unitCost"
                         type="number"
@@ -269,12 +270,12 @@ const BOMCalculator = () => {
                           <div>
                             <h4 className="font-medium">{material.name}</h4>
                             <p className="text-sm text-muted-foreground">
-                              {material.quantity} {material.unit} × ${material.unitCost.toFixed(2)}
+                              {material.quantity} {material.unit} × ₹{material.unitCost.toFixed(2)}
                             </p>
                           </div>
                         </div>
                         <div className="flex items-center gap-4">
-                          <span className="font-medium">${material.totalCost.toFixed(2)}</span>
+                          <span className="font-medium">₹{material.totalCost.toFixed(2)}</span>
                           <Button
                             variant="outline"
                             size="sm"
@@ -299,21 +300,21 @@ const BOMCalculator = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="text-center p-6 border border-border rounded-lg">
+                  <div className="text-center p-6 border border-border rounded-lg bg-gradient-to-br from-card to-secondary/50">
                     <div className="text-2xl font-bold text-primary mb-2">
-                      ${calculateTotalCost().toFixed(2)}
+                      ₹{calculateTotalCost().toFixed(2)}
                     </div>
                     <div className="text-sm text-muted-foreground">Total Material Cost</div>
                   </div>
-                  <div className="text-center p-6 border border-border rounded-lg">
+                  <div className="text-center p-6 border border-border rounded-lg bg-gradient-to-br from-card to-secondary/50">
                     <div className="text-2xl font-bold text-primary mb-2">
-                      ${calculateCostPerPiece().toFixed(2)}
+                      ₹{calculateCostPerPiece().toFixed(2)}
                     </div>
                     <div className="text-sm text-muted-foreground">Cost Per Piece</div>
                   </div>
-                  <div className="text-center p-6 border border-border rounded-lg">
+                  <div className="text-center p-6 border border-border rounded-lg bg-gradient-to-br from-card to-accent/30">
                     <div className="text-2xl font-bold text-primary mb-2">
-                      ${calculateWithCPP().toFixed(2)}
+                      ₹{calculateWithCPP().toFixed(2)}
                     </div>
                     <div className="text-sm text-muted-foreground">Cost with CPP</div>
                   </div>
@@ -334,7 +335,7 @@ const BOMCalculator = () => {
                         {materials.map((material) => (
                           <div key={material.id} className="flex justify-between items-center">
                             <span>{material.name}</span>
-                            <span>${material.totalCost.toFixed(2)} ({((material.totalCost / calculateTotalCost()) * 100).toFixed(1)}%)</span>
+                            <span>₹{material.totalCost.toFixed(2)} ({((material.totalCost / calculateTotalCost()) * 100).toFixed(1)}%)</span>
                           </div>
                         ))}
                       </div>

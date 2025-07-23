@@ -8,9 +8,11 @@ import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Analytics from "./pages/Analytics";
 import Integrations from "./pages/solutions/Integrations";
 import Invoicing from "./pages/solutions/Invoicing";
+import PaymentReminder from "./pages/solutions/PaymentReminder";
 import About from "./pages/company/About";
 import Team from "./pages/company/Team";
 import Careers from "./pages/company/Careers";
@@ -32,9 +34,11 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/solutions/integrations" element={<Integrations />} />
           <Route path="/solutions/invoicing" element={<Invoicing />} />
+          <Route path="/solutions/payment-reminder" element={<PaymentReminder />} />
           <Route path="/solutions/erp" element={<Integrations />} />
           <Route path="/solutions/bom" element={<Integrations />} />
           <Route path="/solutions/inventory" element={<Integrations />} />

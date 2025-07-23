@@ -21,8 +21,12 @@ const Navbar = () => {
     <nav className="py-4 border-b border-border">
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
-          <h1 className="text-2xl font-bold text-primary">UnifyEdge</h1>
+        <Link to="/" className="flex items-center space-x-3">
+          <img 
+            src="/lovable-uploads/4e048db8-c9bb-40ce-b177-127638a2a814.png" 
+            alt="UnifyEdge" 
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -63,11 +67,16 @@ const Navbar = () => {
                     Analytics
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/solutions/integrations" className="cursor-pointer">
-                    Integrations
-                  </Link>
-                </DropdownMenuItem>
+                 <DropdownMenuItem asChild>
+                   <Link to="/solutions/integrations" className="cursor-pointer">
+                     Integrations
+                   </Link>
+                 </DropdownMenuItem>
+                 <DropdownMenuItem asChild>
+                   <Link to="/solutions/payment-reminder" className="cursor-pointer">
+                     Payment Reminders
+                   </Link>
+                 </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
@@ -110,6 +119,9 @@ const Navbar = () => {
             <div className="flex items-center gap-3">
               <Link to="/login">
                 <Button variant="ghost">Login</Button>
+              </Link>
+              <Link to="/signup">
+                <Button variant="outline">Sign Up</Button>
               </Link>
               <Link to="/contact">
                 <Button>Request Demo</Button>
@@ -175,6 +187,13 @@ const Navbar = () => {
               Integrations
             </Link>
             <Link
+              to="/solutions/payment-reminder"
+              className="text-foreground hover:text-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Payment Reminders
+            </Link>
+            <Link
               to="/pricing"
               className="text-foreground hover:text-primary transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
@@ -194,6 +213,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Login
+            </Link>
+            <Link
+              to="/signup"
+              className="text-foreground hover:text-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Sign Up
             </Link>
             <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
               <Button className="w-full">Request Demo</Button>
