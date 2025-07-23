@@ -13,6 +13,9 @@ import Analytics from "./pages/Analytics";
 import Integrations from "./pages/solutions/Integrations";
 import Invoicing from "./pages/solutions/Invoicing";
 import PaymentReminder from "./pages/solutions/PaymentReminder";
+import ERPSystem from "./pages/solutions/ERPSystem";
+import BOMCosting from "./pages/solutions/BOMCosting";
+import InventoryManagement from "./pages/solutions/InventoryManagement";
 import About from "./pages/company/About";
 import Team from "./pages/company/Team";
 import Careers from "./pages/company/Careers";
@@ -39,9 +42,9 @@ const App = () => (
           <Route path="/solutions/integrations" element={<Integrations />} />
           <Route path="/solutions/invoicing" element={<Invoicing />} />
           <Route path="/solutions/payment-reminder" element={<PaymentReminder />} />
-          <Route path="/solutions/erp" element={<Integrations />} />
-          <Route path="/solutions/bom" element={<Integrations />} />
-          <Route path="/solutions/inventory" element={<Integrations />} />
+          <Route path="/solutions/erp" element={<ERPSystem />} />
+          <Route path="/solutions/bom" element={<BOMCosting />} />
+          <Route path="/solutions/inventory" element={<InventoryManagement />} />
           <Route path="/solutions/analytics" element={<Analytics />} />
           <Route path="/company/about" element={<About />} />
           <Route path="/company/team" element={<Team />} />

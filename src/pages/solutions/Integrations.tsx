@@ -196,6 +196,13 @@ const Integrations = () => {
                     className="w-full gap-2" 
                     variant={integration.status === "Active" ? "default" : "outline"}
                     disabled={integration.status === "Coming Soon"}
+                    onClick={() => {
+                      if (integration.status === "Active") {
+                        window.open('#', '_blank');
+                      } else if (integration.status === "Beta") {
+                        window.open('/contact', '_blank');
+                      }
+                    }}
                   >
                     {integration.status === "Active" ? "Configure" : 
                      integration.status === "Beta" ? "Join Beta" : "Coming Soon"}
